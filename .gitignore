@@ -1,0 +1,125 @@
+# ============================================================
+# Azure CLI – local state, caches and session data
+# Usually located in ~/.azure, but ignore it if created locally.
+# ============================================================
+.azure/
+.azureclitask/
+
+# Azure Developer CLI local environment data
+.azure-dev/
+.azuredevops/
+
+# ============================================================
+# Local environment variables and secrets
+# Never commit these files.
+# ============================================================
+.env
+.env.*
+!.env.example
+
+*.local.env
+*.secrets.env
+*.secret
+*.secrets
+
+# ============================================================
+# Bicep / ARM – machine- or environment-specific parameter files
+# Commit only sanitized example/shared parameter files.
+# ============================================================
+*.local.bicepparam
+*.local.parameters.json
+*.secrets.bicepparam
+*.secrets.parameters.json
+
+# Common local parameter naming patterns
+parameters.local.json
+parameters.secrets.json
+dev.local.bicepparam
+test.local.bicepparam
+prod.local.bicepparam
+
+# Bicep compilation output, if generated locally
+*.bicep.json
+
+# ============================================================
+# Terraform – reserved for a future Terraform implementation
+# Never commit local state files or local Terraform working data.
+# ============================================================
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+
+# Keep the dependency lock file in source control when Terraform is used.
+!.terraform.lock.hcl
+
+# Local Terraform variables that can contain sensitive values
+*.auto.tfvars
+*.auto.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+*.local.tfvars
+*.local.tfvars.json
+*.secrets.tfvars
+*.secrets.tfvars.json
+
+# ============================================================
+# macOS Finder and filesystem metadata
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.AppleDouble
+.LSOverride
+Icon?
+
+# macOS temporary editor / Office files
+*.swp
+*.swo
+*~
+*.tmp
+
+# ============================================================
+# Editors and IDEs
+# ============================================================
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio / Visual Studio for Mac
+.vs/
+
+# ============================================================
+# Shell history, local scripts and logs
+# ============================================================
+.zsh_history
+.bash_history
+.history
+
+*.log
+logs/
+tmp/
+temp/
+.cache/
+
+# ============================================================
+# Local test, deployment and report output
+# ============================================================
+artifacts/
+reports/
+coverage/
+test-results/
